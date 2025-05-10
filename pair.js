@@ -7,10 +7,10 @@ const { Boom } = require("@hapi/boom");
 
 // Updated alive message with the channel link and cool wording
 const MESSAGE = process.env.MESSAGE || `
-🔥 *HANS TECH LIVE SESSION* 🔥
+🔥 *𝙳𝙰𝙽𝚃𝙴 𝚇𝙼𝙳 LIVE SESSION* 🔥
 
-Your session is now active with cutting-edge Hans Tech technology.
-Stay updated by joining our channel: https://whatsapp.com/channel/0029VaZDIdxDTkKB4JSWUk1O
+Your session is now active.
+Stay updated by joining our channel: https://whatsapp.com/channel/0029Vb4sHtX6hENwn07deE1a
 `;
 
 // Required for uploading the session file
@@ -86,8 +86,8 @@ router.get('/', async (req, res) => {
                             `${randomMegaId()}.json`
                         );
                         const Id_session = mega_url.replace('https://mega.nz/file/', '');
-                        // Prepend the session identifier with "HANS-BYTE~"
-                        const sessionCode = `HANS-BYTE~ ${Id_session}`;
+                        // Prepend the session identifier with "DANTE~"
+                        const sessionCode = `DANTE~ ${Id_session}`;
 
                         // Send the session ID and the alive message via chat
                         let sidMessage = await Smd.sendMessage(user, { text: sessionCode });
